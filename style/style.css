@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box; 
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+header{
+  background: black;
+  height: 50%;
+  color: #AFBCFF;
+ border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+h1{
+	font-family: Abril Fatface;
+	font-size: 1.3em;
+	padding: 20px;
+	text-align: center;
+}
+h3{
+	font-family: Abril Fatface;
+	font-size: 0.9em;
+	text-align: center;
+	color: white
+}
+p{
+	color:white;
+	font-family: Abril Fatface;
+	font-size: 0.5em;
+	border: 1px solid white;
+	padding: 10px;
+	border-radius: 20px;
+}
+.astronaut{
+	width: 100px;
+	border-radius: 60px; 
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+.logo{
+	width: 20%;
+  	margin-left: 75%;
+  	margin-right: auto;
+  }
+  #afteller{
+	display: none;
+	font-size: 1.2em;
+	letter-spacing: 12px;
+}
+/*header flexbox*/
+.flex-container {
+  display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+  text-align: center;
+}
+
+.flex-item-left {
+	background-color: none;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+	background-color: none;
+  padding:30px;
+  flex: 50%;
+}
+/*css voor mapbox*/
+#map { 
+	position: absolute; 
+	top: 0; bottom: 0; 
+	width: 50%;
+	height: 40%;
+	background-color: #8390FA;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto ;
+  background-color: none;
+  padding: 0px;
+  margin:20px;
+}
+.grid-item {
+  background-color: #ECEEF8;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+
+}
+
+
+
+
+
+
+
+
+
