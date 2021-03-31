@@ -1,11 +1,14 @@
 * {
   box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
 }
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
+  font-family: Abril Fatface;
 }
 header{
   background: black;
@@ -15,20 +18,24 @@ header{
   border-bottom-left-radius: 50px;
 }
 h1{
-	font-family: Abril Fatface;
 	font-size: 1.3em;
 	padding: 20px;
 	text-align: center;
 }
 h3{
-	font-family: Abril Fatface;
 	font-size: 0.9em;
 	text-align: center;
 	color: white
 }
+h2{
+	font-family: cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 40;
+	font-style: normal
+	font-size:0.5em;
+}
 p{
 	color:white;
-	font-family: Abril Fatface;
 	font-size: 0.5em;
 	border: 1px solid white;
 	padding: 10px;
@@ -71,33 +78,51 @@ p{
   flex: 50%;
 }
 /*css voor mapbox*/
-#map { 
-	position: absolute; 
-	top: 0; bottom: 0; 
-	width: 50%;
-	height: 40%;
-	background-color: #8390FA;
-}
 
+#map { 
+	width:100%; 
+	height:60vh;
+}
+.mapboxgl-canvas {
+	margin:10px;
+}
 
 .grid-container {
   display: grid;
   grid-template-columns: auto ;
   background-color: none;
   padding: 0px;
-  margin:20px;
+  margin:10px;
 }
 .grid-item {
   background-color: #ECEEF8;
   border-radius: 20px;
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
 
 }
 
+/*buttons styling*/
+a{
+	text-decoration: none;
+	font-family: cormorant-garamond semi, serif;
+	color: #8390FA;
+	font-weight: 700;
+	font-style: normal
+	font-size:0.8em;
+}
+nav{
+	margin: 20px;
+	text-align: center;
+}
+#knop1, #knop2, #knop3{
+	padding: 10px;
+}
+a:hover{
+	background-color: #F8F4F1;
+	border-radius: 30px;
 
-
-
+}
 
 
 
