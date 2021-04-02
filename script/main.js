@@ -134,73 +134,50 @@ var marker4 = new mapboxgl.Marker({color: "#B1B9FC"})
 
 //------------Geocoder--------------
 var geocoder = new MapboxGeocoder({
-accessToken: mapboxgl.accessToken,
-mapboxgl: mapboxgl
+	accessToken: mapboxgl.accessToken,
+	types: 'country,region,place,postcode,locality,neighborhood'
 });
- 
-document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 
 
+	geocoder.addTo('#geocoder');
 
 
 
+	geocoder.on('result', function(response) {
+	document.getElementById('longSpan').innerHTML = response.result.center[0];
+	document.getElementById('latSpan').innerHTML = response.result.center[1];
 
 
 
+	map.flyTo({
+		center: [response.result.center[0], response.result.center[1]],
+		zoom: 12,
+		speed: 0.5,
+		essential: true // this animation is considered essential with respect to prefers-reduced-motion
+	});
 
 
 
+	var request = 'https://api.openweathermap.org/data/2.5/weather?lat=' + response.result.center[1] + '&lon=' + response.result.center[0] + '&appid=def5ffd6e81edb38c05e01ccf841e119&q'
+	// get current weather
+	fetch(request)
+
+	// parse response to JSON format
+	.then(function(responseWeather) {
+	return responseWeather.json();
+	})
+
+	// do something with response
+	.then(function(responseWeather) {
+	// show full JSON object
+	var weatherBox = document.getElementById('weather');
+	var degC = Math.floor(responseWeather.main.temp - 273.15);
+	weatherBox.innerHTML = degC + '&#176;C <br>' + responseWeather.weather[0].description;
+	});
+});
 
 
-
-
-
-
-
-// var geocoder = new MapboxGeocoder({
-// accessToken: mapboxgl.accessToken,
-// types: 'country,region,place,postcode,locality,neighborhood'
-// });
-
-
-
-// geocoder.addTo('#geocoder');
-
-
-
-// geocoder.on('result', function(response) {
-// document.getElementById('longSpan').innerHTML = response.result.center[0];
-// document.getElementById('latSpan').innerHTML = response.result.center[1];
-
-
-
-// map.flyTo({
-// center: [response.result.center[0], response.result.center[1]],
-// zoom: 12,
-// speed: 0.5,
-// essential: true // this animation is considered essential with respect to prefers-reduced-motion
-// });
-
-
-
-// var request = 'https://api.openweathermap.org/data/2.5/weather?lat=' + response.result.center[1] + '&lon=' + response.result.center[0] + '&appid=795c18ee99ae89fb4ded6d7194f41cb2'
-// // get current weather
-// fetch(request)
-
-// // parse response to JSON format
-// .then(function(responseWeather) {
-// return responseWeather.json();
-// })
-
-// // do something with response
-// .then(function(responseWeather) {
-// // show full JSON object
-// var weatherBox = document.getElementById('weather');
-// var degC = Math.floor(responseWeather.main.temp - 273.15);
-// weatherBox.innerHTML = degC + '&#176;C <br>' + responseWeather.weather[0].description;
-// });
-// });
 
 
 
