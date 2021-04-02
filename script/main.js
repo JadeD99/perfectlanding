@@ -42,6 +42,39 @@ zoom: 12,
 center: [-158.000061, 21.438911]
 });
 
+map.on('load', function () {
+// Add Mapillary sequence layer.
+// https://www.mapillary.com/developer/tiles-documentation/#sequence-layer
+map.addSource('mapillary', {
+'type': 'vector',
+'tiles': [
+'https://d25uarhxywzl1j.cloudfront.net/v0.1/{z}/{x}/{y}.mvt'
+],
+'minzoom': 6,
+'maxzoom': 14
+});
+map.addLayer(
+{
+'id': 'mapillary',
+'type': 'line',
+'source': 'mapillary',
+'source-layer': 'mapillary-sequences',
+'layout': {
+'line-cap': 'round',
+'line-join': 'round'
+},
+'paint': {
+'line-opacity': 0.6,
+'line-color': '#8390FA',
+'line-width': 2
+}
+},
+'waterway-label'
+);
+});
+ console.log(map);
+map.addControl(new mapboxgl.NavigationControl());
+
 
 //------------Knoppen koppelen aan locaties
 document.getElementById('knop1').onclick = function() {
@@ -92,38 +125,6 @@ var marker4 = new mapboxgl.Marker({color: "#B1B9FC"})
 
 
  
-map.on('load', function () {
-// Add Mapillary sequence layer.
-// https://www.mapillary.com/developer/tiles-documentation/#sequence-layer
-map.addSource('mapillary', {
-'type': 'vector',
-'tiles': [
-'https://d25uarhxywzl1j.cloudfront.net/v0.1/{z}/{x}/{y}.mvt'
-],
-'minzoom': 6,
-'maxzoom': 14
-});
-map.addLayer(
-{
-'id': 'mapillary',
-'type': 'line',
-'source': 'mapillary',
-'source-layer': 'mapillary-sequences',
-'layout': {
-'line-cap': 'round',
-'line-join': 'round'
-},
-'paint': {
-'line-opacity': 0.6,
-'line-color': '#8390FA',
-'line-width': 2
-}
-},
-'waterway-label'
-);
-});
- console.log(map);
-map.addControl(new mapboxgl.NavigationControl());
 
 // markers toevoegen
 // var popup = new mapboxgl.Popup({ offset: 25 }).setText(
