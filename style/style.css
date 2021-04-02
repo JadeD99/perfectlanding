@@ -101,6 +101,21 @@ p{
   margin: 10px;
 
 }
+/*geocoder*/
+.geocoder {
+position: absolute;
+z-index: 1;
+width: 50%;
+left: 50%;
+margin-left: -25%;
+top: 10px;
+}
+.mapboxgl-ctrl-geocoder {
+min-width: 100%;
+}
+#map {
+margin-top: 75px;
+}
 
 /*buttons styling*/
 a{
@@ -125,6 +140,118 @@ a:hover{
 }
 
 
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1279px){
+  .flex-container {
+    flex-direction: row;
+  }
+   .grid-container{
+     grid-template-columns: 65% auto ;  
+ }
+ .flex-item-left, .flex-item-left{
+ 	padding: 10px;
+ 	max-height: 10%;
+ 	}
+ 	#knop1, #knop2, #knop3{
+	padding: 30px;
+}
+.astronaut{
+	width: 18%;
+	border-radius: 40px; 
+	display: block;
+  	margin-top: auto;
+  	margin-bottom: auto;
+	}
+	 #afteller{
+ 	position: relative;
+ 	top: 0;
+ 	right: 10%;
+ 	display: block;
+	float: center;
+	padding: 15px;
+	letter-spacing: 12px;
+}
+}
+
+
+/*laptop*/
+@media only screen and (min-width: 1280px) and (max-width: 1919px){
+	  .flex-container {
+    flex-direction: row;
+  }
+   .grid-container{
+     grid-template-columns: 75% auto;
+ }
+
+  .flex-item-left, {
+ 	padding: 0;
+ 	max-height: 0;
+ }
+ .flex-item-left{
+ 	max-height: 10%;
+ }
+  #afteller{
+ 	position: relative;
+ 	top: 0;
+ 	right: 9%;
+ 	display: block;
+	float: center;
+	padding: 15px;
+	font-size: 1.5em;
+	letter-spacing: 12px;
+}
+ 	.astronaut{
+	width: 18%;
+	border-radius: 40px; 
+	display: block;
+  	margin-top: auto;
+  	margin-bottom: auto;
+	}
+	#knop1, #knop2, #knop3{
+	padding: 90px;
+}
+a{
+	
+	font-size:1.2em;
+}
+}
 
 
 
+/*desktop*/
+@media only screen and (min-width: 1920px) {
+  .flex-container {
+    flex-direction: row;
+  }
+   .grid-container{
+     grid-template-columns: 85% auto;
+ }
+  .flex-item-left, .flex-item-left{
+ 	padding: 0;
+ 	max-height: 0;
+ }
+ #afteller{
+ 	position: relative;
+ 	top: 0;
+ 	right: 9%;
+ 	display: block;
+	float: center;
+	font-size: 1.8em;
+	letter-spacing: 12px;
+}
+  .astronaut{
+	width: 150px;
+	border-radius: 60px; 
+	display: block;
+  	margin-top: auto;
+  	margin-bottom: auto;
+}
+a{
+	
+	font-size:1.5em;
+}
+#knop1, #knop2, #knop3{
+	padding: 120px;
+}
+
+}
