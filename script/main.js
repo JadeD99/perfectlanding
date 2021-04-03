@@ -108,17 +108,17 @@ var marker = new mapboxgl.Marker({color: "#B1B9FC"})
 
 var marker2 = new mapboxgl.Marker({color: "#B1B9FC"})
 .setLngLat([-156.331924, 20.798363])
-.setPopUp(popup)
+//.setPopUp(popup)
 .addTo(map);
 
 var marker3 = new mapboxgl.Marker({color: "#B1B9FC"})
 .setLngLat([14.602859514023589, 40.63356246965732])
-.setPopUp(popup)
+//.setPopUp(popup)
 .addTo(map);
 
 var marker4 = new mapboxgl.Marker({color: "#B1B9FC"})
 .setLngLat([-149.824260, 61.537280])
-.setPopUp(popup)
+//.setPopUp(popup)
 .addTo(map);
 
 
@@ -145,8 +145,8 @@ var geocoder = new MapboxGeocoder({
 
 
 	geocoder.on('result', function(response) {
-	document.getElementById('longSpan').innerHTML = response.result.center[0];
-	document.getElementById('latSpan').innerHTML = response.result.center[1];
+	//document.getElementById('longSpan').innerHTML = response.result.center[0];
+	//document.getElementById('latSpan').innerHTML = response.result.center[1];
 
 
 

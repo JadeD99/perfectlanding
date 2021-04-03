@@ -28,34 +28,35 @@ h3{
 	color: white
 }
 h2{
-	font-family: cormorant-garamond semi, serif;
+	font-family:cormorant-garamond semi, serif;
 	color: black;
-	font-weight: 40;
+	font-weight: 400;
 	font-style: normal
-	font-size:0.5em;
+	font-size:0.3em;
 }
 p{
 	color:white;
 	font-size: 0.5em;
-	border: 1px solid white;
+	
 	padding: 10px;
 	border-radius: 20px;
 }
 .astronaut{
-	width: 100px;
+	width: 90px;
 	border-radius: 60px; 
 	display: block;
   	margin-left: auto;
   	margin-right: auto;
 }
 .logo{
-	width: 20%;
+	width: 23%;
   	margin-left: 75%;
   	margin-right: auto;
   }
   #afteller{
 	display: none;
 	font-size: 1.2em;
+	border: 1px solid white;
 	letter-spacing: 12px;
 }
 /*header flexbox*/
@@ -99,8 +100,32 @@ p{
   border-radius: 20px;
   padding: 10px;
   margin: 10px;
-
 }
+.geocoderP{
+	text-align: center;
+	color:black;
+	font-size: 1.2em;
+	padding: 10px;
+	font-family: cormorant-garamond, serif;
+	font-weight: 300;
+	font-style: normal;
+}
+.geocoder{
+  	width: 100%;
+}
+#weer{
+	text-align: center;
+	padding: 20px;
+}
+div .geocoder{
+	display: block;
+}
+#weather{
+	font-family: cormorant-garamond, serif;
+font-weight: 600;
+font-style: normal; 
+}
+
 /*geocoder*/
 /*.geocoder {
 position: absolute;
@@ -143,7 +168,7 @@ a:hover{
     flex-direction: row;
   }
    .grid-container{
-     grid-template-columns: 65% auto ;  
+     grid-template-columns: 65% auto;  
  }
  .flex-item-left, .flex-item-left{
  	padding: 10px;
@@ -168,6 +193,39 @@ a:hover{
 	float: center;
 	padding: 15px;
 	letter-spacing: 12px;
+}
+h2{
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 400;
+	font-style: normal
+	font-size:0.6em;
+}
+.geocoderP{
+	text-align: center;
+	color:black;
+	font-size: 1.4em;
+	padding: 10px;
+	font-family: cormorant-garamond, serif;
+	font-weight: 300;
+	font-style: normal;
+}
+.geocoder{
+  	width: 100%;
+  	padding: 10px;
+  	margin: 10px;
+}
+#weer{
+	text-align: center;
+	padding: 20px;
+}
+div .geocoder{
+	display: block;
+}
+#weather{
+	font-family: cormorant-garamond, serif;
+font-weight: 600;
+font-style: normal; 
 }
 }
 
@@ -213,7 +271,39 @@ a{
 	
 	font-size:1.2em;
 }
-
+h2{
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 400;
+	font-style: normal
+	font-size:0.6em;
+}
+.geocoderP{
+	text-align: center;
+	color:black;
+	font-size: 1.6em;
+	padding: 10px;
+	font-family: cormorant-garamond, serif;
+	font-weight: 300;
+	font-style: normal;
+}
+.geocoder{
+  	width: 100%;
+  	padding: 10px;
+  	margin: 10px;
+}
+#weer{
+	text-align: center;
+	padding: 20px;
+}
+div .geocoder{
+	display: block;
+}
+#weather{
+	font-family: cormorant-garamond, serif;
+font-weight: 600;
+font-style: normal; 
+}
 
 }
 
@@ -225,7 +315,7 @@ a{
     flex-direction: row;
   }
    .grid-container{
-     grid-template-columns: 85% auto;
+     grid-template-columns: center auto auto;
  }
   .flex-item-left, .flex-item-left{
  	padding: 0;
@@ -254,5 +344,39 @@ a{
 #knop1, #knop2, #knop3{
 	padding: 120px;
 }
+h2{
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 400;
+	font-style: normal
+	font-size:1em;
+}
+.geocoderP{
+	text-align: center;
+	color:black;
+	font-size: 2em;
+	padding: 10px;
+	font-family: cormorant-garamond, serif;
+	font-weight: 300;
+	font-style: normal;
+}
+.geocoder{
+  	width: 100%;
+  	padding: 10px;
+  	margin: 10px;
+}
+#weer{
+	text-align: center;
+	padding: 20px;
+}
+div .geocoder{
+	display: block;
+}
+#weather{
+	font-family: cormorant-garamond, serif;
+font-weight: 600;
+font-style: normal; 
+}
+
 
 }
