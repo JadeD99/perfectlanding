@@ -27,13 +27,7 @@ h3{
 	text-align: center;
 	color: white
 }
-h2{
-	font-family:cormorant-garamond semi, serif;
-	color: black;
-	font-weight: 400;
-	font-style: normal
-	font-size:0.3em;
-}
+
 p{
 	color:white;
 	font-size: 0.5em;
@@ -112,17 +106,26 @@ p{
 	font-style: normal;
 }
 .geocoder{
-  	width: 100%;
+  	  margin: auto;
+  width: 100%;
+  padding: 10px;
 }
+
 #weer{
 	text-align: center;
 	padding: 20px;
+	display: block;
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 600;
+	font-style: normal
+	font-size:0.3em;
 }
 div .geocoder{
 	display: block;
 }
 #weather{
-	font-family: cormorant-garamond, serif;
+font-family: cormorant-garamond, serif;
 font-weight: 600;
 font-style: normal; 
 }
@@ -139,7 +142,32 @@ top: 10px;
 .mapboxgl-ctrl-geocoder {
 min-width: 100%;
 }*/
-
+.mapboxgl-ctrl-geocoder--input {
+    font: inherit;
+    max-width: 100%;
+    border: 0;
+    background-color: white;
+    margin: 0;
+    height: 40px;
+    color: #404040;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 6px 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   	font-size: 0.9em;
+}
+.mapboxgl-ctrl-geocoder {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: cormorant-garamond semi, serif;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    min-width: 260px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: width .25s, min-width .25s;
+}
 
 /*buttons styling*/
 a{
@@ -169,7 +197,10 @@ a:hover{
     flex-direction: row;
   }
    .grid-container{
-     grid-template-columns: 65% auto;  
+     grid-template-columns: 65% 35%;  
+ }
+ .grid-item{
+ 	padding: 10px;
  }
  .flex-item-left, .flex-item-left{
  	padding: 10px;
@@ -195,12 +226,31 @@ a:hover{
 	padding: 15px;
 	letter-spacing: 12px;
 }
-h2{
-	font-family:cormorant-garamond semi, serif;
-	color: black;
-	font-weight: 400;
-	font-style: normal
-	font-size:0.6em;
+.mapboxgl-ctrl-geocoder--input {
+    font: inherit;
+    max-width: 100%;
+    border: 0;
+    background-color: none;
+    margin: 0;
+    height: 40px;
+    color: #404040;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 6px 55px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+.mapboxgl-ctrl-geocoder {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: cormorant-garamond, serif;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    min-width: 190px;
+    z-index: 1;
+    /* border-radius: 4px; */
+    transition: width .25s, min-width .25s;
 }
 .geocoderP{
 	text-align: center;
@@ -212,21 +262,32 @@ h2{
 	font-style: normal;
 }
 .geocoder{
-  	width: 100%;
+  	width: 30%;
   	padding: 10px;
   	margin: 10px;
 }
-#weer{
-	text-align: center;
-	padding: 20px;
-}
+
 div .geocoder{
 	display: block;
 }
 #weather{
-	font-family: cormorant-garamond, serif;
-font-weight: 600;
-font-style: normal; 
+	text-align: center;
+	padding: 20px;
+	display: block;
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 600;
+	font-style: normal
+}
+#weer{
+	text-align: center;
+	padding: 20px;
+	display: block;
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 600;
+	font-style: normal
+	font-size:0.3em;
 }
 }
 
@@ -272,13 +333,7 @@ a{
 	
 	font-size:1.2em;
 }
-h2{
-	font-family:cormorant-garamond semi, serif;
-	color: black;
-	font-weight: 400;
-	font-style: normal
-	font-size:0.6em;
-}
+
 .geocoderP{
 	text-align: center;
 	color:black;
@@ -296,14 +351,51 @@ h2{
 #weer{
 	text-align: center;
 	padding: 20px;
+	display: block;
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 600;
+	font-style: normal
+	font-size:0.3em;
 }
 div .geocoder{
 	display: block;
 }
 #weather{
-	font-family: cormorant-garamond, serif;
-font-weight: 600;
-font-style: normal; 
+	text-align: center;
+	padding: 20px;
+	display: block;
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 1em;
+}
+.mapboxgl-ctrl-geocoder--input {
+    font: inherit;
+    max-width: 80%;
+    border: 0;
+    background-color: none;
+    margin: 0;
+    height: 40px;
+    color: #404040;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 6px 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   	font-size: 0.9em;
+}
+.mapboxgl-ctrl-geocoder {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: cormorant-garamond, serif;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    min-width: 180px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: width .25s, min-width .25s;
 }
 
 }
@@ -339,18 +431,31 @@ font-style: normal;
   	margin-bottom: auto;
 }
 a{
-	
 	font-size:1.5em;
+}
+#weer{
+	text-align: center;
+	padding: 20px;
+	display: block;
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 600;
+	font-size: x-large;
+	font-style: normal
+	font-size:1em;
+}
+#weather h2{
+	text-align: center;
+	padding: 30px;
+	display: block;
+	font-family:cormorant-garamond semi, serif;
+	color: black;
+	font-weight: 300;
+	font-style: normal
+	font-size:2em;
 }
 #knop1, #knop2, #knop3{
 	padding: 120px;
-}
-h2{
-	font-family:cormorant-garamond semi, serif;
-	color: black;
-	font-weight: 400;
-	font-style: normal
-	font-size:1em;
 }
 .geocoderP{
 	text-align: center;
@@ -362,22 +467,51 @@ h2{
 	font-style: normal;
 }
 .geocoder{
-  	width: 100%;
   	padding: 10px;
   	margin: 10px;
+  	  margin: auto;
+  width: 60%;
+  padding: 10px;
 }
-#weer{
-	text-align: center;
-	padding: 20px;
-}
+
 div .geocoder{
 	display: block;
 }
-#weather{
-	font-family: cormorant-garamond, serif;
-font-weight: 600;
-font-style: normal; 
+.mapboxgl-ctrl-geocoder--input {
+    font: inherit;
+    text-align: center;
+    max-width: 80%;
+    border: 0;
+    background-color: none;
+    margin: 0;
+    height: 50px;
+    color: #404040;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 6px 35px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   	font-size: 1.8em;
 }
-
-
+.mapboxgl-ctrl-geocoder {
+    line-height: 24px;
+    font-family: cormorant-garamond, serif;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    margin: auto;
+  	width: 60%;
+  	padding: 10px;
+    min-width: 180px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: width .25s, min-width .25s;
+}
+path{
+	 font-size: 2em;
+}
+.mapboxgl-ctrl-geocoder--icon-search {
+    left: -50px;
+    width: 40%;
+    height: 30px;
+}
 }
